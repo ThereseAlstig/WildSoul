@@ -1,0 +1,98 @@
+.headerContainer{
+    display: flex;
+  flex-direction: column;
+    align-items: stretch;
+    padding: 0 20px;
+    color: white;
+    height: auto;
+padding-bottom: 0,8rem;;
+    gap: 1rem;
+    background-color: #2A2C1C;
+position: relative;
+}
+
+.headerNav{
+    width: 100%;
+    
+}
+
+.headerList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .headerListItem {
+
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .loginArea {
+   
+   margin-top: -2.8rem;
+   margin-left: auto;
+   margin-bottom: 0,3rem;
+  }
+
+.loginBtn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+    ;
+
+  
+    .lockIcon {
+      width: 20px;
+      height: 20px;
+      filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(10deg);
+    }
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+
+  .logo-img {
+    height: 107px;
+    width: auto;
+  }
+  
+
+  /* 🔓 LOGGAIN */
+    .loginBtn:hover .lockIcon {
+        filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(10deg);
+    }
+
+    .profileImg,
+    .profilePlaceholder {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .profilePlaceholder {
+      background-color: #BD9B69;
+      color: #fff;
+      font-weight: bold;
+      font-family: 'Work Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
