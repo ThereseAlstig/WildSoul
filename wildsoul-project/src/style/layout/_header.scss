@@ -57,6 +57,7 @@ position: relative;
     .lockIcon {
       width: 20px;
       height: 20px;
+      color:#BD9B69;
       filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(10deg);
     }
   
@@ -69,13 +70,12 @@ position: relative;
   .logo-img {
     height: 107px;
     width: auto;
+    color: #BD9B69;
   }
   
 
   /* 🔓 LOGGAIN */
-    .loginBtn:hover .lockIcon {
-        filter: brightness(1.1) sepia(1) saturate(5) hue-rotate(10deg);
-    }
+  
 
     .profileImg,
     .profilePlaceholder {

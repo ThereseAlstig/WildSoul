@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import lockIcon from "../assets/lock.svg"; // lägg till egen ikon
+import lockIcon from "../assets/lock.png"; // lägg till egen ikon
 import frameLogo from "../assets/Frame.png"; // lägg till egen ikon
 import fallbackImage from "../assets/profile.png"; // lägg till egen ikon
+
 
 export const Header = () => {
   // MOCK: ändra till auth-logik sen
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+console.log(isLoggedIn);
+setIsLoggedIn(true);
   const user = {
     name: "Therese",
     profilePicture: "" // ← töm om du vill testa fallback
@@ -35,7 +37,7 @@ export const Header = () => {
         />
         ) : (
           <button className="loginBtn text-gold ">
-            <img src={lockIcon} alt="Logga in" className="lockIcon text-gold " />
+            <img src={lockIcon} alt="Logga in" className="lockIcon " />
             LOGGA IN
           </button>
         )}

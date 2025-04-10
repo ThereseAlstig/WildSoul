@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 export const Layout =()=>{
 
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+ 
 
 
 
