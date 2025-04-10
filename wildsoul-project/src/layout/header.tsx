@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import lockIcon from "../assets/lock.png"; // lägg till egen ikon
 import frameLogo from "../assets/Frame.png"; // lägg till egen ikon
 import fallbackImage from "../assets/profile.png"; // lägg till egen ikon
@@ -8,8 +8,12 @@ import fallbackImage from "../assets/profile.png"; // lägg till egen ikon
 export const Header = () => {
   // MOCK: ändra till auth-logik sen
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-console.log(isLoggedIn);
-setIsLoggedIn(true);
+
+
+  useEffect(() => {
+    void setIsLoggedIn; // Detta använder funktionen utan att göra något
+  }, []);
+  
   const user = {
     name: "Therese",
     profilePicture: "" // ← töm om du vill testa fallback
