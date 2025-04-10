@@ -96,3 +96,39 @@ position: relative;
       font-size: 1rem;
       text-transform: uppercase;
     }
+
+    /* För dropdown */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%; // läggs direkt under
+    left: 0;
+    background-color: #2A2C1C;// eller din bakgrund
+    padding: 0.5rem 1rem;
+    z-index: 999;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+
+    li {
+      margin: 0.3rem 0;
+
+      a {
+       font-family: S;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &:hover .dropdownMenu {
+    display: block;
+  }
+}

@@ -31,7 +31,7 @@ h6 {
   font-size: 1rem;
 }
 
-a, button{
+a, span, button{
     font-family: 'DM Serif Text', serif;
     font-weight: normal;
     color: #1a1a1a;
@@ -58,6 +58,6 @@ p {
   font-family: 'worksans', sans-serif;
 }
 
-.text-gold {
+.text-gold, span {
     color: #BD9B69;
   }
