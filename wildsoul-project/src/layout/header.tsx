@@ -22,6 +22,7 @@ export const Header = () => {
   return (
     <header className="headerContainer">
       <nav className="headerNav">
+     
         <ul className="headerList">
           <li><Link to="/" className="headerListItem text-gold "> <img src={frameLogo} alt="Logo" className="logo-img" /></Link></li>
           <li><Link to="/traning" className="headerListItem text-gold ">TRÄNING ▼ </Link></li>
