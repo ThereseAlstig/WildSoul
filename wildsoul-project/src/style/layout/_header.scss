@@ -132,3 +132,9 @@ position: relative;
     display: block;
   }
 }
+
+
+.font-header.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

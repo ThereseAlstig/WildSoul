@@ -5,7 +5,9 @@ import naringLogo from "../assets/naring.png";
 import lockIcon from "../assets/lock.png"; 
 import frameLogo from "../assets/Frame.png"; 
 import fallbackImage from "../assets/profile.png"; 
-
+import meLogo from "../assets/me2.png";
+import shopLogo from "../assets/shop2.png";
+import communityLogo from "../assets/comm.png";
 
 export const Header = () => {
   // MOCK: ändra till auth-logik sen
@@ -21,9 +23,21 @@ export const Header = () => {
     logoToShow = traningLogo;
   } else if (location.pathname.startsWith("/naring")) {
     logoToShow = naringLogo;
+  
+  } else if (location.pathname.startsWith("/shop")) {
+    logoToShow = shopLogo;
+  
+  } else if (location.pathname.startsWith("/community")) {
+    logoToShow = communityLogo;
+  } else if (location.pathname.startsWith("/wildsoulweekly")) {
+    logoToShow = meLogo;
   }else{
     logoToShow = frameLogo;
   }
+
+  const isActive = (basePath: string) => {
+    return location.pathname.startsWith(basePath);
+  };
 
 
   const user = {
@@ -39,7 +53,7 @@ export const Header = () => {
           <li><Link to="/" className="headerListItem text-gold "> <img src={logoToShow} alt="Logo" className="logo-img" /></Link></li>
           
           <li className="headerListItem text-gold dropdown">
-  <span className="font-header">TRÄNING ▼</span>
+  <span className={`font-header ${isActive('/traning') ? 'active' : ''}`}>TRÄNING ▼</span>
   <ul className="dropdownMenu">
     <li><Link to="/traning" className="text-gold">TRÄNING</Link></li>
     <li><Link to="/traning/styrka" className="text-gold">UTMANINGAR</Link></li>
@@ -48,7 +62,7 @@ export const Header = () => {
   </ul>
 </li>
          <li className="headerListItem text-gold dropdown">
-  <span className="font-header">NÄRING/KOST ▼</span>
+  <span className={`font-header ${isActive('/naring') ? 'active' : ''}`}>NÄRING/KOST ▼</span>
   <ul className="dropdownMenu">
           <li><Link to="/naring" className="text-gold ">NÄRING/KOST</Link></li>
           <li><Link to="/naring/recept" className="text-gold ">RECEPT/GLUTENFFRITT</Link></li>
@@ -59,7 +73,7 @@ export const Header = () => {
          </li>
           
          <li className="headerListItem text-gold dropdown">
-         <span className="font-header">COMMUNITY ▼</span>
+         <span className={`font-header ${isActive('/community') ? 'active' : ''}`}>COMMUNITY ▼</span>
           <ul className="dropdownMenu">
           <li><Link to="/community" className="headerListItem text-gold">COMMUNITY </Link></li>
           <li><Link to="/community/forum" className="headerListItem text-gold">FORUM</Link></li>
@@ -72,7 +86,7 @@ export const Header = () => {
 </li>
 
 <li className="headerListItem text-gold dropdown">
-         <span className="font-header">SHOP ▼</span>
+         <span className={`font-header ${isActive('/shop') ? 'active' : ''}`}>SHOP ▼</span>
           <ul className="dropdownMenu">
           <li><Link to="/shop" className="headerListItem text-gold ">SHOP</Link></li>
           <li><Link to="/shop/frukost" className="headerListItem text-gold ">FRUKOST/MELLANMÅL</Link></li>
@@ -84,7 +98,7 @@ export const Header = () => {
         </li>
 
           <li className="headerListItem text-gold dropdown">
-         <span className="font-header">WILDSOUL WEEKLY  ▼</span>
+         <span className={`font-header ${isActive('/wildsoulweekly') ? 'active' : ''}`}>WILDSOUL WEEKLY  ▼</span>
           <ul className="dropdownMenu">
           <li><Link to="/wildsoulweekly" className="headerListItem text-gold ">WILDSOUL WEEKLY</Link></li>
           <li><Link to="/wildsoulweekly/recept" className="headerListItem text-gold ">RECEPT</Link></li>
