@@ -1,0 +1,29 @@
+.button{
+
+    background-color: #C38A3E;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1.4rem;
+    padding: 0px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 
+    background-color 0.3s ease, 
+    box-shadow 0.3s ease, 
+    transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: #5C2A28;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Större skugga vid hover */
+    transform: translateY(-3px);
+    color: #E6CFAA; 
+    text-decoration: none;
+  }
+
+  &:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
