@@ -7,6 +7,7 @@ import { Nutrient } from "./pages/nutrient";
 import { Community } from "./pages/community";
 import { Shop } from "./pages/shop";
 import { WildSoulWeekly } from "./pages/wildSoulWeekly";
+import { Challenges } from "./pages/challenges";
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
           <Route path="/traning" element={<Workout />} />
+          <Route path="/traning/utmaningar" element={<Challenges />} />
           <Route path="/naring" element={<Nutrient />} />
           <Route path="/community" element={<Community />} />
           <Route path="/shop" element={<Shop />} />
