@@ -1,7 +1,10 @@
 import image from "../assets/runner.png";
-import { AddBanner } from "../assets/components/addBanner"
-import { AddText } from "../assets/components/addText";
-import { AddLinks } from "../assets/components/addLinks";
+import { AddBanner } from "../components/addBanner"
+import { AddText } from "../components/addText";
+import { AddLinks } from "../components/addLinks";
+import foodBasket from "../assets/foodbasket.png";
+import bike from "../assets/bike.png";
+import zen from "../assets/zen.png";
 
 export const Homepage = () => {
 
@@ -21,18 +24,18 @@ const textData = {
 
 const linkData = [{
     title: "RECEPT",
-    link: "https://www.example.com",        
-    imageSrc: image // Replace with your image URL
+    link: "/naring/recept",        
+    imageSrc: foodBasket // Replace with your image URL
 },
 {
     title: "UTMANINGAR",
     link: "/traning/utmaningar",
-    imageSrc: image // Replace with your image URL
+    imageSrc: bike // Replace with your image URL
 },
 {       
     title: "COMMUNITY",
-    link: "https://www.emple.com",
-    imageSrc: image // Replace with your image URL
+    link: "/community",
+    imageSrc: zen // Replace with your image URL
     },  ]
 
     return(

@@ -90,7 +90,7 @@ export const Header = () => {
   <ul className="dropdownMenu"  style={{ display: openDropdown === 'traning' ? 'block' : 'none' }}>
     <li><Link to="/traning" className="text-gold">TRÄNING</Link></li>
     <li><Link to="/traning/utmaningar" className="text-gold">UTMANINGAR</Link></li>
-    <li><Link to="/traning/kondition" className="text-gold">TRÄNINGSPLANERARE</Link></li>
+    <li><Link to="/traning/planner" className="text-gold">TRÄNINGSPLANERARE</Link></li>
     <li><Link to="/traning/mobilitet" className="text-gold">FOKUS</Link></li>
   </ul>
     )}
