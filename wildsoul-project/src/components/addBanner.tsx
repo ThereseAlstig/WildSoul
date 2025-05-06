@@ -5,10 +5,11 @@ interface AddBannerProps {
     text: string;
     buttonText: string;
     imageSrc: string;
+    link: string;
 }
 
 
-export const AddBanner = ({title, text, buttonText, imageSrc }: AddBannerProps ) => {
+export const AddBanner = ({title, text, buttonText, imageSrc, link }: AddBannerProps ) => {
 
     return(
 
@@ -16,7 +17,9 @@ export const AddBanner = ({title, text, buttonText, imageSrc }: AddBannerProps )
        <div className="add-banner-text-container">
      <h1 className="add-banner-title">{title}</h1>
      <p className="add-banner-text">{text}</p>
-      <button className="button">{buttonText}</button>
+      <button className="button"
+        onClick={() => window.location.href = link}
+        >{buttonText}</button>
       
        </div>
 
