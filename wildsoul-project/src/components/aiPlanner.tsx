@@ -1,13 +1,13 @@
 
 import { useState } from "react"
-import OpenAI from "openai";
+// import OpenAI from "openai";
 
 // Skapa API-konfiguration
 
-const openai = new OpenAI({
-    apiKey: import.meta.env.VITE_OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true,
-  });
+// const openai = new OpenAI({
+//     apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+//     dangerouslyAllowBrowser: true,
+//   });
   type TrainingPass = {
     date: string;
     title: string;
@@ -41,13 +41,13 @@ export const AiPlanner = ({ onProgramGenerated }: AiPlannerProps) => {
    
 // Mocka API-anropet för att simulera svar
 const isMockMode = true; 
-type TrainingPass = {
-  date: string;
-  title: string;
-  duration: number;
-  intensity: string;
-  notes: string;
-};
+// type TrainingPass = {
+//   date: string;
+//   title: string;
+//   duration: number;
+//   intensity: string;
+//   notes: string;
+// };
 
 
 
