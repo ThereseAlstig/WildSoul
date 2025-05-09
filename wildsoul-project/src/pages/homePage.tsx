@@ -17,7 +17,8 @@ const bannerData = {
     title: "AI-baserad träningsplanering",
     text: "Arbeta mot dina träningsmål med hjälp av en personlig plan genererad av AI",        
     buttonText: "Kom igång",
-    imageSrc: image // Replace with your image URL
+    imageSrc: image, // Replace with your image URL
+    link: "/traning/planner" // Replace with your image URL
 }
 
 const textData = {
@@ -69,6 +70,7 @@ const pictureData = [{
     text={bannerData.text}
     buttonText={bannerData.buttonText}
     imageSrc={bannerData.imageSrc} 
+    link={bannerData.link}
 
  />
 

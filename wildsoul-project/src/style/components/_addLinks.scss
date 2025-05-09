@@ -44,6 +44,32 @@
     object-fit: contain;
 }
 
+.add-links-soft{
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px; /* Mellanrum mellan boxarna */
+    justify-content: center;
+    padding: 50px;
+    justify-content: space-evenly; 
+}
+
+//addlinks soft
+.add-links-item-soft {
+    background-color: var(--soft-color); /* Vi fixar detta i kod */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.links-soft{
+    color:black;
+    text-decoration: underline
+}
+.add-links-title-soft {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: black; /* Eller svart beroende på bakgrundsfärg */
+}
 /* RESPONSIVT: på mobil (smal skärm) */
 @media (max-width: 768px) {
     .add-links {
