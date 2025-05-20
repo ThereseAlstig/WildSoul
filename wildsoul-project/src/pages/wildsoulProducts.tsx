@@ -1,4 +1,4 @@
-export const WildsoulProducts = () => {
+ const WildsoulProducts = () => {
     return (
         <div>
             <h1>Wildsoul Products</h1>
@@ -6,3 +6,6 @@ export const WildsoulProducts = () => {
         </div>
     );
 }
+
+export default WildsoulProducts;
+export { WildsoulProducts };

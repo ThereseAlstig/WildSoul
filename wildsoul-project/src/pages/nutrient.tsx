@@ -1,4 +1,4 @@
-export const Nutrient = () => {
+ const Nutrient = () => {
     return (
         <div className="nutrientContainer">
             <h1>Nutrient</h1>
@@ -6,3 +6,5 @@ export const Nutrient = () => {
         </div>
     );
 }
+export default Nutrient;
+export { Nutrient };

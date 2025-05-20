@@ -1,4 +1,4 @@
-export const Community = () => {
+const Community = () => {
     return (
         <div className="nutrientContainer">
             <h1>Nutrient</h1>
@@ -6,3 +6,6 @@ export const Community = () => {
         </div>
     );
 }
+
+export default Community;
+export { Community };

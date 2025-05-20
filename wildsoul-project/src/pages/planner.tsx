@@ -5,7 +5,7 @@ import { TrainingPass } from "../types/trainingPass"; // Importera TrainingPass-
 
 
 
-export const Planner = () => {
+ const Planner = () => {
     type ProgramResult = {
         program: TrainingPass[];
         summary: string;
@@ -15,7 +15,7 @@ export const Planner = () => {
 
   return (
     <div className="plannerContainer">
-      <h1>Planner</h1>
+      <h1>Tränings planerare</h1>
 
       {!programData && (
         <AiPlanner onProgramGenerated={(data) => setProgramData(data)} />
@@ -27,3 +27,7 @@ export const Planner = () => {
     </div>
   );
 };
+
+
+export default Planner;
+export { Planner };

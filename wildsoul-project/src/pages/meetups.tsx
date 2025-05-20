@@ -1,4 +1,4 @@
-export const Meetups = () => {
+const Meetups = () => {
     return (
         <div>
             <h1>Meetups</h1>
@@ -6,3 +6,6 @@ export const Meetups = () => {
         </div>
     );
 }
+
+export default Meetups;
+export { Meetups };

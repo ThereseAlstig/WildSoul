@@ -1,4 +1,4 @@
-export const Forum = () => {
+const Forum = () => {
     return (
         <div>
             <h1>Forum</h1>
@@ -6,3 +6,5 @@ export const Forum = () => {
         </div>
     );
 }
+export default Forum;
+export { Forum };

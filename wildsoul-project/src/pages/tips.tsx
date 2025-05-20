@@ -1,4 +1,4 @@
-export const Tips = () => {
+ const Tips = () => {
     return (
         <div>
             <h1>Tips</h1>
@@ -6,3 +6,7 @@ export const Tips = () => {
         </div>
     );
 }
+
+
+export default Tips;
+export { Tips };

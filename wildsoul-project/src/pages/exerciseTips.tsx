@@ -1,4 +1,4 @@
-export const ExerciseTips = () => {
+const ExerciseTips = () => {
     return (
         <div>
             <h1>Exercise Tips</h1>
@@ -6,3 +6,6 @@ export const ExerciseTips = () => {
         </div>
     );
 }
+
+export default ExerciseTips;
+export { ExerciseTips };

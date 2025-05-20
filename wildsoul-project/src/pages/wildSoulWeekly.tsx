@@ -1,4 +1,4 @@
-export const WildSoulWeekly = () => {
+const WildSoulWeekly = () => {
     return (
         <div className="wildSoulWeeklyContainer">
             <h1>Wild Soul Weekly</h1>
@@ -6,3 +6,6 @@ export const WildSoulWeekly = () => {
         </div>
     );
 }
+
+export default WildSoulWeekly;
+export { WildSoulWeekly };

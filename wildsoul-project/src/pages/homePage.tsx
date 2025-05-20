@@ -10,7 +10,7 @@ import Breakfast from "../assets/breakfast-1804436_1280.jpg";
 import Training  from "../assets/man-2264825_1280 (1).jpg";
 import FoodTips from "../assets/food-3223286_1280.jpg";
 
-export const Homepage = () => {
+const Homepage = () => {
 
 
 const bannerData = {
@@ -85,3 +85,6 @@ const pictureData = [{
     )
 
 }
+
+export default Homepage;
+export { Homepage };

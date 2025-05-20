@@ -1,4 +1,4 @@
-export const Inspiration = () => {
+const Inspiration = () => {
     return (
         <div>
             <h1>Inspiration</h1>
@@ -6,3 +6,6 @@ export const Inspiration = () => {
         </div>
     );
 }
+
+export default Inspiration;
+export { Inspiration };

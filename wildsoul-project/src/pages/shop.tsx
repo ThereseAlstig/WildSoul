@@ -1,9 +1,12 @@
-export const Shop = () => {
+ const Shop = () => {
 
         return (
             <div className="shopContainer">
                 <h1>Shop</h1>
-                <p>Shop page content goes here.</p>
+                <p>Produkter kommer</p>
             </div>
         );
     }
+
+    export default Shop;
+    export { Shop };

@@ -1,4 +1,4 @@
-export const TrainingProducts = () => {
+const TrainingProducts = () => {
     return (
         <div>
             <h1>Training Products</h1>
@@ -6,3 +6,6 @@ export const TrainingProducts = () => {
         </div>
     );
 }
+
+export default TrainingProducts;
+export { TrainingProducts };

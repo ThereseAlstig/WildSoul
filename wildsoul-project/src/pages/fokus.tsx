@@ -1,4 +1,4 @@
-export const Fokus = () => {
+const Fokus = () => {
 
     return (
         <div>
@@ -7,3 +7,6 @@ export const Fokus = () => {
         </div>
     );
 }
+
+export default Fokus;
+export { Fokus };

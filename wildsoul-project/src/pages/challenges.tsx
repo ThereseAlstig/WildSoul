@@ -1,4 +1,4 @@
-export const Challenges = () => {
+const Challenges = () => {
 
     return (
         <div>
@@ -7,3 +7,6 @@ export const Challenges = () => {
         </div>
     );
     }
+
+export default Challenges;
+export { Challenges };

@@ -1,4 +1,4 @@
-export const Recepies = () => {
+const Recepies = () => {
 
     return (
         <div>
@@ -7,3 +7,6 @@ export const Recepies = () => {
         </div>
     );
 }
+
+export default Recepies;
+export { Recepies };

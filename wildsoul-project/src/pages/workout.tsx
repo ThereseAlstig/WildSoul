@@ -8,7 +8,7 @@ import zen from "../assets/zen.png";
 import { AddLinksSoft } from "../components/addLinkSoft";
 
 
-export const Workout = () => {
+ const Workout = () => {
 
     const bannerData = {
         title: "Välkommen till din träningsresa",
@@ -65,3 +65,6 @@ export const Workout = () => {
         </div>
     );
 }
+
+export default Workout;
+export { Workout };
