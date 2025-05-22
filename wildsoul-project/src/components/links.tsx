@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 interface LinksProps {
@@ -22,7 +23,7 @@ export const LinksPicture = ({ linkData }: LinksProps) => {
                         <img src={data.imageSrc} alt={data.title} className="picture-links__image" />
                         <div className="picture-links__overlay-bar">
                             <h3 className="picture-links__title">{data.title}</h3>
-                            <a href={data.link} className="picture-links__link">Läs mer</a>
+                            <Link to={data.link} className="text-gold picture-links__link">Läs mer</Link>
                         </div>
                     </div>
                 </div>

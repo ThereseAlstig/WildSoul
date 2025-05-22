@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface addLinksProps {
     linkData: {
         title: string;  
@@ -18,17 +20,17 @@ export const AddLinksSoft = ({linkData}: addLinksProps ) => {
                  >
                <div  className="add-links-text-container">
                 
-                <a href={data.link} className="link-soft">
-                    <h1 className="add-links-title-soft">{data.title}</h1>
-                </a>
+           
+                <Link to={data.link} className="text-gold"></Link>
 
+                <h1 className="add-links-title-soft">{data.title}</h1>
             </div>
             <div className="add-links-image-container">
                 <p className="add-links-text">{data.text}</p>
             </div> 
-            <a href={data.link} className="link-soft">
+            <Link to={data.link} className="link-soft">
                 LÄS MER
-            </a>
+            </Link>
             </div>
             ))
             }

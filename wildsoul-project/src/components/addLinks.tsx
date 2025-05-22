@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface addLinksProps {
     linkData: {
         title: string;  
@@ -19,9 +21,9 @@ export const AddLinks = ({linkData}: addLinksProps ) => {
                  style={{ backgroundColor: colors[index % colors.length] }} >
                <div  className="add-links-text-container">
                 
-                <a href={data.link} className="link">
-                    <h1 className="add-links-title">{data.title}</h1>
-                </a>
+              
+                    
+                   <Link to={data.link} className="text-gold"><h1 className="add-links-title">{data.title}</h1></Link>
 
             </div>
             <div className="add-links-image-container">
