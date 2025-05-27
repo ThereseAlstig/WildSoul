@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 interface Challenge {
     title: string;
     goal: string;
     schedule: string; // t.ex. "3 gånger i veckan"
     progression: string;
-    img: string; // t.ex. "Öka med 2 reps varje vecka"
+    img: string; 
+    link: string;// t.ex. "Öka med 2 reps varje vecka"
 }
 
 interface AddChallengesProps {
@@ -13,26 +16,21 @@ interface AddChallengesProps {
 
 export const AddChallenges = ({ challenges }: AddChallengesProps) => {
     return (
-          <div className="add-challenges space-y-4">
+           <div className="picture-links">
             {challenges.map((challenge, index) => (
                 <div
                     key={index}
-                    className="relative p-4 rounded shadow-md text-white overflow-hidden"
-                    style={{
-                        backgroundImage: `url(${challenge.img})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                    }}
+                    className={`picture-links__item ${index === 2 ? 'picture-links__item--full' : ''}`}
                 >
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-
-                    {/* Content above overlay */}
-                    <div className="relative z-10">
-                        <h3 className="text-xl font-bold">{challenge.title}</h3>
-                        <p><strong>Mål:</strong> {challenge.goal}</p>
-                        <p><strong>Upplägg:</strong> {challenge.schedule}</p>
-                        <p><strong>Progression:</strong> {challenge.progression}</p>
+                    <div className="picture-links__image-wrapper">
+                        <img src={challenge.img} alt={challenge.title} className="picture-links__image" />
+                        <div className="picture-links__overlay-bar">
+                            <h3 className="picture-links__title">{challenge.title}</h3>
+                            {/* <p><strong>Mål:</strong> {challenge.goal}</p>
+                            <p><strong>Upplägg:</strong> {challenge.schedule}</p>
+                            <p><strong>Progression:</strong> {challenge.progression}</p> */}
+                            <Link to={challenge.link} className="text-gold picture-links__link">Läs mer</Link>
+                        </div>
                     </div>
                 </div>
             ))}

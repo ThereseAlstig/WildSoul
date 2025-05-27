@@ -2,6 +2,7 @@ import yoga from "../assets/yoga.jpg";
 import lopning from "../assets/lopning.jpg";
 import styrka from "../assets/styrka.jpg";
 import { AddChallenges } from "../components/addChalllenges";
+import { link } from "framer-motion/client";
 
 const Challenges = () => {
 
@@ -11,21 +12,24 @@ const Challenges = () => {
             goal: "Bygg upp din kondition och spring 5 km utan att behöva gå.",
             schedule: "Träna 3 gånger i veckan med varierande distanser.",
             progression: "Öka distansen med 500 meter varje vecka.",
-            img: lopning
+            img: lopning,
+            link: "/challenges/running-5km"
         },
         {
             title: "Styrketräning för hela kroppen",
             goal: "Bli starkare och bygga muskelmassa.",
             schedule: "Träna styrka 4 gånger i veckan med fokus på olika muskelgrupper.",
             progression: "Öka vikterna med 2,5 kg varje vecka.",
-            img: styrka
+            img: styrka,
+            link: "/challenges/strength-training"
         },
         {
             title: "Yoga för flexibilitet och balans",
             goal: "Förbättra din rörlighet och minska stress.",
             schedule: "Yoga 3 gånger i veckan, varav en gång med fokus på andning.",
             progression: "Lägg till en ny position varje vecka.",
-            img: yoga
+            img: yoga,
+            link: "/challenges/yoga"
         }
     ];
 
