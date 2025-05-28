@@ -2,7 +2,7 @@ import yoga from "../assets/yoga.jpg";
 import lopning from "../assets/lopning.jpg";
 import styrka from "../assets/styrka.jpg";
 import { AddChallenges } from "../components/addChalllenges";
-import { link } from "framer-motion/client";
+
 
 const Challenges = () => {
 
