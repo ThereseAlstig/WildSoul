@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef, useContext} from "react";
 import traningLogo from "../assets/traning.png"; 
 import naringLogo from "../assets/naring.png"; 
 import lockIcon from "../assets/lock.png"; 
@@ -8,13 +8,48 @@ import fallbackImage from "../assets/profile.png";
 import meLogo from "../assets/me2.png";
 import shopLogo from "../assets/shop2.png";
 import communityLogo from "../assets/comm.png";
-
+import { AuthContext } from "../context/authContext";
+import LoginModal from "../components/login";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faLock, faLockOpen} from "@fortawesome/free-solid-svg-icons";
 
 
 export const Header = () => {
   // MOCK: ändra till auth-logik sen
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
+
+   const [isModalOpen, setIsModalOpen] = useState(false);
+    const auth = useContext(AuthContext);
+    const [isOpen, setIsOpen] = useState(false);
+
+    
+    
+    if (!auth) {
+      throw new Error('AuthContext must be used within an AuthProvider');
+    }
+    
+     const { isAuthenticated  } = auth;
+  
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const openModal = () => {
+        setIsModalOpen(true);  // Öppna modalen när användaren vill logga in eller skapa konto
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false); // Stäng modalen när användaren trycker på "stäng"
+      };
+    
+    
+
+      const handleCloseMenu = () => {
+        setIsOpen(false);
+      };
+
   let logoToShow = frameLogo;
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -91,7 +126,7 @@ export const Header = () => {
     <li><Link to="/traning" className="text-gold">TRÄNING</Link></li>
     <li><Link to="/traning/utmaningar" className="text-gold">UTMANINGAR</Link></li>
     <li><Link to="/traning/planner" className="text-gold">TRÄNINGSPLANERARE</Link></li>
-    <li><Link to="/traning/mobilitet" className="text-gold">FOKUS</Link></li>
+    {/* <li><Link to="/traning/mobilitet" className="text-gold">FOKUS</Link></li> */}
   </ul>
     )}
 </li>
@@ -171,18 +206,23 @@ export const Header = () => {
       </nav>
 
       <div className="loginArea">
-        {isLoggedIn ? (
+        {isAuthenticated ? (
           <img
           src={user?.profilePicture || fallbackImage}
           alt="Profilbild"
           className="profileImg"
         />
         ) : (
-          <button className="loginBtn text-gold ">
-            <img src={lockIcon} alt="Logga in" className="lockIcon " />
+          <button className="loginBtn text-gold " onClick={openModal}>
+              <FontAwesomeIcon
+  icon={isAuthenticated ? faLock : faLockOpen} className="lockIcon "   title={isAuthenticated ? 'Logged In' : 'Logged Out'}
+/> 
             LOGGA IN
           </button>
         )}
+
+        <LoginModal isOpen={isModalOpen} closeModal={closeModal} />
+ 
       </div>
     </header>
   )

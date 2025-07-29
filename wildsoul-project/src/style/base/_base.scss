@@ -3,7 +3,8 @@ html, body {
     padding: 0;
     background-color: #E6CFAA;
     font-family: 'Inter', sans-serif; // eller annan font du vill ha
-    min-height: 100vh;
+  position: relative;
+  z-index: 0;
     width: 100%;
     box-sizing: border-box;
   }

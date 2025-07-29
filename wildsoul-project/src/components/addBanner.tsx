@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 interface AddBannerProps {
@@ -17,9 +18,7 @@ export const AddBanner = ({title, text, buttonText, imageSrc, link }: AddBannerP
        <div className="add-banner-text-container">
      <h1 className="add-banner-title">{title}</h1>
      <p className="add-banner-text">{text}</p>
-      <button className="button"
-        onClick={() => window.location.href = link}
-        >{buttonText}</button>
+     <Link to={link} className="button"><h1 className="add-links-title">{buttonText}</h1></Link>
       
        </div>
 

@@ -25,6 +25,7 @@ import { Cart } from "./pages/cart";
 import { FoodTips } from "./pages/foodTips";
 import { ExerciseTips } from "./pages/exerciseTips";
 import { Other } from "./pages/other";
+import MyPage from "./pages/myPage";
 
 
 
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
           <Route path="/traning" element={<Workout />} />
+           <Route path="/minsida" element={<MyPage />} />
           <Route path="/traning/utmaningar" element={<Challenges />} />
           <Route path="/traning/planner" element={<Planner />} />
           <Route path="/traning/mobilitet" element={<Fokus />} />

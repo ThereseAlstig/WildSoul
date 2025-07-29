@@ -1,0 +1,136 @@
+.modal {
+  position: fixed;
+  z-index: 99999 !important;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  padding: 2rem;
+  position: relative;
+  animation: scaleIn 0.3s ease;
+   z-index: 100000 !important;
+
+  h2 {
+    color: #c9a84d; // WildSoul-guld
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+    color: #444;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:first-of-type {
+      background-color: #c9a84d; // Guldknapp
+      color: #fff;
+
+      &:hover {
+        background-color: #b48d33;
+      }
+    }
+
+    &.secondary {
+      background-color: #f5f5f5;
+      color: #333;
+
+      &:hover {
+        background-color: #e6e6e6;
+      }
+    }
+
+    &.link {
+      background: none;
+      color: #0077cc;
+      padding: 0.5rem 0;
+      text-align: center;
+      text-decoration: underline;
+
+      &:hover {
+        color: #005fa3;
+      }
+    }
+
+    &.close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      font-size: 1.5rem;
+      color: #666;
+      background: none;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+
+    &.error {
+      color: red;
+    }
+
+    &.success {
+      color: green;
+    }
+  }
+}
+
+// Enkla animationer
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
