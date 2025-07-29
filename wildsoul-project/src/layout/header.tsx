@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef, useContext} from "react";
 import traningLogo from "../assets/traning.png"; 
 import naringLogo from "../assets/naring.png"; 
-import lockIcon from "../assets/lock.png"; 
+
 import frameLogo from "../assets/Frame.png"; 
 import fallbackImage from "../assets/profile.png"; 
 import meLogo from "../assets/me2.png";
@@ -16,12 +16,12 @@ import {  faLock, faLockOpen} from "@fortawesome/free-solid-svg-icons";
 
 export const Header = () => {
   // MOCK: ändra till auth-logik sen
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
 
    const [isModalOpen, setIsModalOpen] = useState(false);
     const auth = useContext(AuthContext);
-    const [isOpen, setIsOpen] = useState(false);
+    // const [isOpen, setIsOpen] = useState(false);
 
     
     
@@ -32,9 +32,9 @@ export const Header = () => {
      const { isAuthenticated  } = auth;
   
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    // const toggleMenu = () => {
+    //     setIsOpen(!isOpen);
+    // };
 
     const openModal = () => {
         setIsModalOpen(true);  // Öppna modalen när användaren vill logga in eller skapa konto
@@ -46,16 +46,16 @@ export const Header = () => {
     
     
 
-      const handleCloseMenu = () => {
-        setIsOpen(false);
-      };
+      // const handleCloseMenu = () => {
+      //   setIsOpen(false);
+      // };
 
   let logoToShow = frameLogo;
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
-    void setIsLoggedIn; // Detta använder funktionen utan att göra något
-  }, []);
+  // useEffect(() => {
+  //   void setIsLoggedIn; // Detta använder funktionen utan att göra något
+  // }, []);
 
   const toggleDropdown = (menuName: string) => {
     setOpenDropdown((prev) => (prev === menuName ? null : menuName));
